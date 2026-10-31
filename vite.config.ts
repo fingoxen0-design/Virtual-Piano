@@ -13,7 +13,7 @@ export default defineConfig(({ command }) => ({
       server: { entry: "server" },
     }),
     viteReact(),
-    command === "build" ? nitro({ preset: "cloudflare-module" }) : null,
+    command === "build" ? nitro({ preset: "vercel" }) : null,
   ].filter(Boolean),
   server: {
     port: 8080,
